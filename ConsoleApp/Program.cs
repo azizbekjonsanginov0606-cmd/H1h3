@@ -1,9 +1,8 @@
 ﻿using Domain.Models;
 using Infrastructure.Services;
 
-Student student = new Student()
+Student student1 = new Student()
 {
-    
     FirsName = "Umed",
     LastName = "Safarov",
     Id = 1,
@@ -14,11 +13,11 @@ Student student = new Student()
 Student student2 = new Student()
 {
     
-    FirsName = "Ramazon",
-    LastName = "Davlatov",
+    FirsName = "Sadriddin",
+    LastName = "Uzbekov",
     Id = 2,
     BithDate = DateTime.Now,
-    Address = "Norak"
+    Address = "Aini"
 };
 
 Student student3 = new Student()
@@ -28,16 +27,16 @@ Student student3 = new Student()
     LastName = "Sanginov",
     Id = 3,
     BithDate = DateTime.Now,
-    Address = "Isfara" 
+    Address = "Aini" 
 };
 
 Student student1_1 = new Student
 {
-    FirsName = "Ramazonjon",
-    LastName = "Davlatov",
+    FirsName = "Sadriddinjon",
+    LastName = "Uzbekov",
     Id = 1,
     BithDate = DateTime.Now,
-    Address = "Chalchal"
+    Address = "Aini"
 };
 
 StudentService studentService = new();
@@ -53,54 +52,6 @@ foreach(Student s in show)
 {
     System.Console.WriteLine($"{s.LastName} {s.FirsName} {s.Id} {s.BithDate} {s.Address}");
 }
-
-
-
-Teacher teacher1 = new()
-{
-    FirsName = "Goibov",
-    LastName = "Aziz",
-    Id = 1,
-    Position = "Director",
-    ExperienceAmount = 10
-};
-Teacher teacher2 = new()
-{
-    FirsName = "Musoev",
-    LastName = "La",
-    Id = 2,
-    Position = "Zam-Director",
-    ExperienceAmount = 5
-};
-
-
-Teacher teacher1_1 = new()
-{
-    FirsName = "ALi",
-    LastName = "La",
-    Id = 2,
-    Position = "Zam-Director",
-    ExperienceAmount = 3
-};
-
-
-
-System.Console.WriteLine("------------------------------------------------------");
-
-
-
-TeacherService teacherService = new();
-teacherService.AddTeacher(teacher1);
-teacherService.AddTeacher(teacher2);
-teacherService.UpdateStudent(teacher1_1);
-teacherService.Delete(1);
-var readteacher = teacherService.GetTeacher();
-
-foreach(var t in readteacher)
-{
-    System.Console.WriteLine($"{t.FirsName} {t.LastName} {t.Position} {t.ExperienceAmount}");
-}
-
 Course course1 = new()
 {
     Id = 1,
@@ -150,8 +101,8 @@ foreach(Course c in fcourse)
 Post post1 = new Post(){
 
     Id = 1,
-    Title = "Dubai",
-    Description = "Im in dubai",
+    Title = "Chin",
+    Description = "Im in Chin",
     VoteAmount = 100,
     CreatedAt = DateTime.Today
 };
